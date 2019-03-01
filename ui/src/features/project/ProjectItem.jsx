@@ -4,7 +4,7 @@ class ProjectItem extends Component {
   render() {
     return (
       <h1>
-        This is project items.
+        This is project item.
       </h1>
     )
   }
