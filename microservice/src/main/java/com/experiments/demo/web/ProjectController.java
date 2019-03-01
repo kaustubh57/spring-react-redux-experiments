@@ -50,6 +50,6 @@ public class ProjectController {
 
         projectService.deleteProjectByIdentifier(projectId);
 
-        return new ResponseEntity<>("Project with ID: '" + projectId + "' deleted.", HttpStatus.OK);
+        return new ResponseEntity<>("Project with ID: '" + projectId + "' was deleted.", HttpStatus.OK);
     }
 }
