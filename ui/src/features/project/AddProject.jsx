@@ -1,4 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createProject } from './projectActions';
+import { selectErrors } from '../errors/errorSelectors';
+
+
+const mapState = (state) => {
+  const errors = selectErrors(state);
+
+  return {errors};
+};
+
+const actions = {
+  handleCreateProject: createProject
+};
+
 
 class AddProject extends Component {
 
@@ -32,6 +48,7 @@ class AddProject extends Component {
     };
 
     console.log(newProject);
+    this.props.handleCreateProject(newProject, this.props.history);
   }
 
   render() {
@@ -101,4 +118,8 @@ class AddProject extends Component {
   }
 }
 
-export default AddProject;
+AddProject.propTypes = {
+  handleCreateProject: PropTypes.func.isRequired
+};
+
+export default connect(mapState, actions)(AddProject);
