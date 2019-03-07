@@ -1,0 +1,27 @@
+= Getting Started With Spring REST Docs
+:toc: left
+:toc-title: APIs
+
+This is an example output for a service running at http://localhost:8080:
+
+== /api/project
+
+.request
+include::{snippets}/project/http-request.adoc[]
+
+.response
+include::{snippets}/project/http-response.adoc[]
+
+As you can see the format is very simple, and in fact you always get the same message.
+
+== /google
+
+This is google content
+
+.request
+include::{snippets}/project/http-request.adoc[]
+
+.response
+include::{snippets}/project/http-response.adoc[]
+
+As you can see the format is very simple, and in fact you always get the same message.
